@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{name}}</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th>{{name}}</th>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td>{{age}}</td>
+            </tr>
+            <tr>
+                <td>Metodo:</td>
+                <td>{{getHeroDescription()}}</td>
+            </tr>
+            <tr>
+                <th>Capitalizado:</th>
+                <th>{{name.toUpperCase()}}</th>
+            </tr>
+        </table>
+    </div>
+    <button class="btn btn-primary mx-2" (click)="changeHero()">Cambiar Nombre</button>
+    <button class="btn btn-primary mx-2" (click)="changeAge()">Cambiar Edad</button>
+    <button class="btn btn-primary mx-2" (click)="reset()">Reset</button>
+
+</body>
+
+</html>
