@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeroPageComponent {
 
-    public names: string[] = ['Ironman', 'Spiderman', 'Thor'];
+    public names: string[] = ['Ironman', 'Batman', 'Thor'];
     public ages: number[] = [25, 30, 1500];
-    public descritions: string[] = ['Ironman es el hombre de acero', 'Spiderman fue picado por una araña', 'Thor es el Dios de Trueno'];
+    public descritions: string[] = ['Ironman es el hombre de acero', 'Batman es el hombre murciélago', 'Thor es el Dios de Trueno'];
 
     public name: string = 'Ironman';
     public age: number = 25;
