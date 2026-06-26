@@ -1,0 +1,24 @@
+<h2>Anime component</h2>
+<hr>
+<section class="row">
+    <div class="col-12 com-sm6">
+       <app-character-form/>
+    </div>
+    <div class="col-12 com-sm6">
+        <h3>Listado</h3>
+        <ul>
+            @for (character of character(); track character.id){
+                @if (character.poder > 9000) {
+                    <li>
+                        <span class="badge bg-primary">{{character.name}}</span>
+                        <strong [class.text-danger]="character.poder > 9000">{{character.poder}}</strong>
+                    </li>
+                } @else {
+                    <li>
+                        <strong>Este personaje es muy debil</strong>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</section>
