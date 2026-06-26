@@ -1,0 +1,47 @@
+<h2>Anime component</h2>
+<hr>
+<section class="row">
+    <div class="col-12 com-sm6">
+       <h3>Agregar {{name()}} {{poder()}} </h3>
+            <input 
+            type="text" 
+            name="" 
+            id="" 
+            placeholder="Nombre" 
+            class="form-control" 
+            [value]="name()" 
+            (change)="name.set(txtName.value)" 
+            (input)="name.set(txtName.value)" #txtName>
+
+            <input 
+            type="number" 
+            name="" 
+            id=""
+            placeholder="Poder" 
+            class="form-control" 
+            [value]="poder()" 
+            (change)="poder.set(+txtPoder.value)" 
+            (input)="poder.set(+txtPoder.value)" #txtPoder>
+            
+            <button 
+            type="button" 
+            class="btn btn-primary" (click)="addCharacter()">Agregar</button>
+    </div>
+    <div class="col-12 com-sm6">
+        <h3>Listado</h3>
+        <ul>
+            @for (character of character(); track character.id){
+                @if (character.poder > 9000) {
+                    <li>
+                        <span class="badge bg-primary">{{character.name}}</span>
+                        <strong [class.text-danger]="character.poder > 9000">{{character.poder}}</strong>
+                    </li>
+                } @else {
+                    <li>
+                        <strong>Este personaje es muy debil</strong>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</section>
